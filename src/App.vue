@@ -2,6 +2,7 @@
     <v-app>
         <v-main>
             <template>
+                <UpdatePopupBase></UpdatePopupBase>
                 <navbar v-show="isNavbar"></navbar>
                 <div class="main_cols" :wallet_view="!isNavbar">
                     <transition name="fade" mode="out-in">
@@ -15,14 +16,14 @@
 </template>
 <script>
 
-
+    import UpdatePopupBase from "@/components/UpdatePopups/UpdatePopupBase";
     import Notifications from '@/components/Notifications';
     import Navbar from './components/Navbar';
     import LoadingApp from '@/views/LoadingApp';
 
     export default {
         components: {
-
+            UpdatePopupBase,
             Navbar,
             Notifications,
             LoadingApp
